@@ -1,0 +1,86 @@
+<!-- 
+	Nama : Muhammad Khairul Ahnam
+	Kelas : IF 12
+	NIM : 10123913
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.photo-container {
+	position: relative;
+	width: 300px;
+	height: 200px;
+	margin: 10px;
+	overflow: hidden;
+}
+
+.photo-container img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform .5s ease;
+}
+
+.photo-container:hover img {
+	transform: scale(1.1);
+}
+
+.overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+	overflow: hidden;
+	width: 100%;
+	height: 0;
+	transition: .5s ease;
+}
+
+.photo-container:hover .overlay {
+	height: 100%;
+}
+
+.overlay-text {
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+    </style>
+	<title>Photo Gallery</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<div class="gallery">
+		<div class="photo-container">
+			<img src="multimedia/Banner warkop.jpg" alt="Image 1">
+			<div class="overlay">
+				<div class="overlay-text"></div>
+			</div>
+		</div>
+		<div class="photo-container">
+			<img src="multimedia/iga bakar.jpg" alt="Image 2">
+			<div class="overlay">
+				<div class="overlay-text">Iga Bakar</div>
+	div>
+		</div>
+		<div class="photo-container">
+			<img src="multimedia/nasi timbel.jpg" alt="Image 3">
+			<div class="overlay">
+				<div class="overlay-text">Nasi Timbel</div>
+			</div>
+	</div>
+	</div>
+</body>
+</html>
